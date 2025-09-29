@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Campbell University PSLO Builder Tool</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header img.logo {
+            width: 400px;
+        }
+        header img.pyramid {
+            width: 400px;
+        }
+        h1 {
+            text-align: center;
+            color: #c75b12;
+        }
+        .section {
+            margin-top: 30px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+        select, textarea, input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #c75b12;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff3e6;
+            border: 1px solid #c75b12;
+        }
+    </style>
+</head>
+<body>
+<header>
+<img alt="Campbell University Logo" class="logo" src="Inst-Effectiveness_2024_WhtOnOrg_Screen.png"/>
+<img alt="Bloom's Taxonomy Pyramid" class="pyramid" src="agT7hBitIkH244.jpg"/>
+</header>
+<h1>Campbell University PSLO Builder Tool</h1>
+<div class="section">
+<label for="studentGroup">1. Specify the Student Group:</label>
+<input id="studentGroup" placeholder="e.g., Students graduating with a B.A. in Psychology" type="text"/>
+</div>
+<div class="section">
+<label for="verb">2. Choose the Bloom's Taxonomy Verb/Student Learning Level:</label>
+<select id="verb">
+<optgroup label="Remember">
+<option>Cite</option><option>Define</option><option>Describe</option><option>Draw</option><option>Enumerate</option>
+<option>Identify</option><option>Index</option><option>Indicate</option><option>Label</option><option>List</option>
+<option>Match</option><option>Meet</option><option>Name</option><option>Outline</option><option>Point</option>
+<option>Quote</option><option>Read</option><option>Recall</option><option>Recite</option><option>Recognize</option>
+<option>Record</option><option>Repeat</option><option>Reproduce</option><option>Review</option><option>Select</option>
+<option>State</option><option>Study</option><option>Tabulate</option><option>Trace</option><option>Write</option>
+</optgroup>
+<optgroup label="Understand">
+<option>Add</option><option>Approximate</option><option>Articulate</option><option>Associate</option><option>Characterize</option>
+<option>Clarify</option><option>Classify</option><option>Compare</option><option>Compute</option><option>Contrast</option>
+<option>Convert</option><option>Defend</option><option>Describe</option><option>Detail</option><option>Differentiate</option>
+<option>Discuss</option><option>Distinguish</option><option>Elaborate</option><option>Estimate</option><option>Example</option>
+<option>Explain</option><option>Express</option><option>Extend</option><option>Extrapolate</option><option>Factor</option>
+<option>Generalize</option><option>Give</option><option>Infer</option><option>Interact</option><option>Interpolate</option>
+<option>Interpret</option><option>Observe</option><option>Paraphrase</option><option>Picture graphically</option><option>Predict</option>
+<option>Review</option><option>Rewrite</option><option>Subtract</option><option>Summarize</option><option>Translate</option>
+<option>Visualize</option>
+</optgroup>
+<optgroup label="Apply">
+<option>Acquire</option><option>Adapt</option><option>Allocate</option><option>Alphabetize</option><option>Apply</option>
+<option>Ascertain</option><option>Assign</option><option>Attain</option><option>Avoid</option><option>Back up</option>
+<option>Calculate</option><option>Capture</option><option>Change</option><option>Classify</option><option>Complete</option>
+<option>Compute</option><option>Construct</option><option>Customize</option><option>Demonstrate</option><option>Depreciate</option>
+<option>Derive</option><option>Determine</option><option>Diminish</option><option>Discover</option><option>Draw</option>
+<option>Employ</option><option>Examine</option><option>Exercise</option><option>Explore</option><option>Expose</option>
+<option>Express</option><option>Factor</option><option>Figure</option><option>Graph</option><option>Handle</option>
+<option>Illustrate</option><option>Interconvert</option><option>Investigate</option><option>Manipulate</option><option>Modify</option>
+<option>Operate</option><option>Personalize</option><option>Plot</option><option>Practice</option><option>Predict</option>
+<option>Prepare</option><option>Price</option><option>Process</option><option>Produce</option><option>Project</option>
+<option>Provide</option><option>Relate</option><option>Round off</option><option>Sequence</option><option>Show</option>
+<option>Simulate</option><option>Sketch</option><option>Solve</option><option>Subscribe</option><option>Tabulate</option>
+<option>Transcribe</option><option>Translate</option><option>Use</option>
+</optgroup>
+<optgroup label="Analyze">
+<option>Analyze</option><option>Audit</option><option>Blueprint</option><option>Breadboard</option><option>Break down</option>
+<option>Characterize</option><option>Classify</option><option>Compare</option><option>Confirm</option><option>Contrast</option>
+<option>Correlate</option><option>Detect</option><option>Diagnose</option><option>Diagram</option><option>Differentiate</option>
+<option>Discriminate</option><option>Dissect</option><option>Distinguish</option><option>Document</option><option>Ensure</option>
+<option>Examine</option><option>Explain</option><option>Explore</option><option>Figure out</option><option>File</option>
+<option>Group</option><option>Identify</option><option>Illustrate</option><option>Infer</option><option>Interrupt</option>
+<option>Inventory</option><option>Investigate</option><option>Layout</option><option>Manage</option><option>Maximize</option>
+<option>Minimize</option><option>Optimize</option><option>Order</option><option>Outline</option><option>Point out</option>
+<option>Prioritize</option><option>Proofread</option><option>Query</option><option>Relate</option><option>Select</option>
+<option>Separate</option><option>Subdivide</option><option>Train</option><option>Transform</option>
+</optgroup>
+<optgroup label="Evaluate">
+<option>Appraise</option><option>Assess</option><option>Compare</option><option>Conclude</option><option>Contrast</option>
+<option>Counsel</option><option>Criticize</option><option>Critique</option><option>Defend</option><option>Determine</option>
+<option>Discriminate</option><option>Estimate</option><option>Evaluate</option><option>Explain</option><option>Grade</option>
+<option>Hire</option><option>Interpret</option><option>Judge</option><option>Justify</option><option>Measure</option>
+<option>Predict</option><option>Prescribe</option><option>Rank</option><option>Rate</option><option>Recommend</option>
+<option>Release</option><option>Select</option><option>Summarize</option><option>Support</option><option>Test</option>
+<option>Validate</option><option>Verify</option>
+</optgroup>
+<optgroup label="Create">
+<option>Abstract</option><option>Animate</option><option>Arrange</option><option>Assemble</option><option>Budget</option>
+<option>Categorize</option><option>Code</option><option>Combine</option><option>Compile</option><option>Compose</option>
+<option>Construct</option><option>Cope</option><option>Correspond</option><option>Create</option><option>Cultivate</option>
+<option>Debug</option><option>Depict</option><option>Design</option><option>Develop</option><option>Devise</option>
+<option>Dictate</option><option>Enhance</option><option>Explain</option><option>Facilitate</option><option>Format</option>
+<option>Formulate</option><option>Generalize</option><option>Generate</option><option>Handle</option><option>Import</option>
+<option>Improve</option><option>Incorporate</option><option>Integrate</option><option>Interface</option><option>Join</option>
+<option>Lecture</option><option>Model</option><option>Modify</option><option>Network</option><option>Organize</option>
+<option>Outline</option><option>Overhaul</option><option>Plan</option><option>Portray</option><option>Prepare</option>
+<option>Prescribe</option><option>Produce</option><option>Program</option><option>Rearrange</option><option>Reconstruct</option>
+<option>Relate</option><option>Reorganize</option><option>Revise</option><option>Rewrite</option><option>Specify</option>
+<option>Summarize</option>
+</optgroup>
+</select>
+</div>
+<div class="section">
+<label for="description">3. Provide a Rich, Clear Description of the Expected Skill:</label>
+<textarea id="description" placeholder="e.g., effective rapport-building techniques in simulated counseling sessions, including active listening, empathy, and appropriate nonverbal communication..." rows="5"></textarea>
+</div>
+<button onclick="generatePSLO()">Generate PSLO</button>
+<div id="output"></div>
+<script>
+        function generatePSLO() {
+            const group = document.getElementById('studentGroup').value;
+            const verb = document.getElementById('verb').value;
+            const description = document.getElementById('description').value;
+
+            const pslo = `${group} will be able to ${verb.toLowerCase()} ${description}`;
+            document.getElementById('output').innerHTML = `<strong>Generated PSLO:</strong><br>${pslo}`;
+        }
+    </script>
+</body>
+</html>
